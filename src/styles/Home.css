@@ -1,0 +1,133 @@
+.home {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 70px;
+}
+
+.hero {
+  position: relative;
+  padding-top: 70px;
+  height: 500px;
+  overflow: hidden;
+  transition: background-image 1s ease;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.button-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #f39c12;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #e67e22;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  margin-top: 50px;
+}
+
+.feature {
+  flex-basis: 30%;
+  /* text-align: center; */
+  margin-bottom: 50px;
+}
+
+.feature i {
+  font-size: 3rem;
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feature p {
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    height: 300px;
+
+  }
+  /* .hero img{
+    object-fit:fill;
+  } */
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero button {
+    font-size: 11px;
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+  .button-primary {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 25px;
+    font-size: small;
+    transition: all 0.3s ease;
+  }
+
+  .feature h2 {
+    font-size: 22px;
+  }
+
+  .feature p {
+    font-size: 14px;
+  }
+
+  .testimonial p {
+    font-size: 16px;
+  }
+
+  .testimonial h3 {
+    font-size: 20px;
+  }
+}
