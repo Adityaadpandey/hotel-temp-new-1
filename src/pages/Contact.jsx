@@ -13,7 +13,7 @@ const ContactForm = () => {
     event.preventDefault();
 
     try {
-      await axios.post('http://localhost:3001/send-email', {
+      await axios.post('/.netlify/functions/send-email', {
         name,
         email,
         message,
