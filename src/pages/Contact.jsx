@@ -1,72 +1,124 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
 import "../styles/Contact.css";
 
-const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(false);
+const initialFormData = {
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+};
 
-  const handleSubmit = async (event) => {
+const Contact = () => {
+  const [formData, setFormData] = useState(initialFormData);
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-
-    try {
-      await axios.post('/.netlify/functions/send-email', {
-        name,
-        email,
-        message,
-      });
-      setSuccess(true);
-    } catch (error) {
-      console.error(error);
-      setError('Error sending email. Please try again later.');
+    const validationErrors = validateFormData(formData);
+    if (Object.keys(validationErrors).length === 0) {
+      // send form data to server
+      console.log("Form submitted:", formData);
+      setFormData(initialFormData);
+      setErrors({});
+    } else {
+      setErrors(validationErrors);
     }
   };
 
+  const validateFormData = (data) => {
+    const errors = {};
+
+    if (!data.name.trim()) {
+      errors.name = "Name is required";
+    }
+
+    if (!data.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!isValidEmail(data.email)) {
+      errors.email = "Invalid email address";
+    }
+
+    if (!data.phone.trim()) {
+      errors.phone = "Phone number is required";
+    } else if (!isValidPhone(data.phone)) {
+      errors.phone = "Invalid phone number";
+    }
+
+    if (!data.message.trim()) {
+      errors.message = "Message is required";
+    }
+
+    return errors;
+  };
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isValidPhone = (phone) => {
+    const phoneRegex = /^[0-9]{10}$/;
+    return phoneRegex.test(phone);
+  };
+
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
-          id="name"
           name="name"
-          placeholder="Enter your name"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-          required
+          id="name"
+          value={formData.name}
+          onChange={handleChange}
         />
+        {errors.name && <div className="error">{errors.name}</div>}
       </div>
+
       <div className="form-group">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
-          id="email"
           name="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          required
+          id="email"
+          value={formData.email}
+          onChange={handleChange}
         />
+        {errors.email && <div className="error">{errors.email}</div>}
       </div>
+
+      <div className="form-group">
+        <label htmlFor="phone">Phone:</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          value={formData.phone}
+          onChange={handleChange}
+        />
+        {errors.phone && <div className="error">{errors.phone}</div>}
+      </div>
+
       <div className="form-group">
         <label htmlFor="message">Message:</label>
         <textarea
-          id="message"
           name="message"
-          placeholder="Enter your message"
-          value={message}
-          onChange={(event) => setMessage(event.target.value)}
-          required
-        />
+          id="message"
+          value={formData.message}
+          onChange={handleChange}
+        ></textarea>
+        {errors.message && <div className="error">{errors.message}</div>}
       </div>
-      {error && <div className="error-message">{error}</div>}
-      {success && <div className="success-message">Email sent successfully</div>}
-      <button type="submit">Send</button>
+
+      <button type="submit">Submit</button>
     </form>
   );
 };
 
-export default ContactForm;
+export default Contact;
+

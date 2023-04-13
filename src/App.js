@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Rooms from './pages/Rooms';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import './App.css';
 
 function App() {
   return (

@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/Footer.css";
 
+
 const Footer = () => {
+
   return (
     <>
       <footer>
@@ -20,10 +22,10 @@ const Footer = () => {
                   <a href="/rooms">Rooms</a>
                 </li>
                 <li>
-                  <a href="/">Amenities</a>
+                  <a href="/location">Location</a>
                 </li>
                 <li>
-                  <a href="/">Location</a>
+                  <a href="/">Amenities</a>
                 </li>
                 <li>
                   <a href="/contact">Contact</a>
@@ -49,7 +51,7 @@ const Footer = () => {
             </div>
             <div className="col">
               <h4>Subscribe</h4>
-              <form>
+              <form className="form1">
                 <input
                   type="email"
                   name="email"

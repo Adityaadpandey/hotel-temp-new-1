@@ -44,7 +44,7 @@ footer {
   text-decoration: underline;
 }
 
-form input[type="email"] {
+.form1 input[type="email"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -52,7 +52,7 @@ form input[type="email"] {
   border-radius: 3px;
 }
 
-form button[type="submit"] {
+.form1 button[type="submit"] {
   display: block;
   width:auto;
   padding: 10px;
@@ -65,7 +65,7 @@ form button[type="submit"] {
   transition: all 0.3s ease;
 }
 
-form button[type="submit"]:hover {
+.form1 button[type="submit"]:hover {
   background-color: #e67e22;
 }
 
@@ -83,3 +83,20 @@ form button[type="submit"]:hover {
     width: calc(100% - 20px);
   }
 } */
+
+@media only screen and (max-width: 767px) {
+  *{
+    font-size: 14px;
+  }
+  .col {
+    width: 33%;
+  }
+
+  form input[type="email"] {
+    width: 100%;
+  }
+
+  form button[type="submit"] {
+    width: 100%;
+  }
+}

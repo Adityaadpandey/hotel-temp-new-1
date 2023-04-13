@@ -2,6 +2,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  /* background-color: rgb(195, 195, 195); */
   padding-top: 70px;
 }
 
@@ -44,8 +45,9 @@
   padding: 15px 30px;
   background-color: #f39c12;
   color: #fff;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   text-transform: uppercase;
+  text-decoration: none;
   border: none;
   border-radius: 50px;
   transition: all 0.3s ease;
@@ -53,6 +55,7 @@
 
 .button-primary:hover {
   background-color: #e67e22;
+  text-decoration: none;
 }
 
 .features {
@@ -86,7 +89,8 @@
 
 @media only screen and (max-width: 767px) {
   .hero {
-    height: 300px;
+    height: 500px;
+    /* width: fit-content; */
 
   }
   /* .hero img{
