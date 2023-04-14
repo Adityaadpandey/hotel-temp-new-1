@@ -1,6 +1,6 @@
 footer {
-  background-color: #2c3e50;
-  color: #fff;
+  background-color: rgb(226, 226, 226);
+  color: #2c3e50;
   padding: 50px 0;
 }
 
@@ -36,7 +36,7 @@ footer {
 }
 
 .col ul li a {
-  color: #fff;
+  color: #2c3e50;
   text-decoration: none;
 }
 
@@ -57,7 +57,7 @@ footer {
   width:auto;
   padding: 10px;
   background-color: #f39c12;
-  color: #fff;
+  color: rgb(244, 244, 244);
   border: none;
   border-radius: 3px;
   font-size: 16px;

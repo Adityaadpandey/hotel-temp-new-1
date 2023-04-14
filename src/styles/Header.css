@@ -1,14 +1,15 @@
 header {
-    /* position: fixed;  Set the header to a fixed position */
-    top: 0;
-    left: 0;
-    width: 100%; /* Make the header span the full width of the viewport */
-    padding: 10px;
-    z-index: 1; /* Set the header to a high z-index so it appears above other content */
-    background-color: #e3e3e3; /* Set the background color of the header */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
-    /* margin-bottom: 10px; */
-  }
+  /* position: fixed; Set the header to a fixed position */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the header span the full width of the viewport */
+  padding: 10px;
+  z-index: 1; /* Set the header to a high z-index so it appears above other content */
+  background-color: #efefef; /* Set the background color of the header */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.178); /* Add a subtle shadow effect */
+  /* margin-bottom: 10px; */
+}
+
   
   /* Style the logo */
   .logo img {
