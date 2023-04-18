@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 20px;
   /* background-color: rgb(195, 195, 195); */
-  padding-top: 70px;
+  padding-top: 10px;
 }
 
 .hero {
@@ -11,7 +11,7 @@
   padding-top: 70px;
   height: 500px;
   overflow: hidden;
-  transition: background-image 1s ease;
+  /* transition: background-image 1s ease; */
 }
 
 .hero img {
@@ -62,7 +62,7 @@
   display: flex;
   justify-content: space-between;
   /* flex-direction: column; */
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .feature {

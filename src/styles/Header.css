@@ -6,7 +6,7 @@ header {
   padding: 10px;
   z-index: 1; /* Set the header to a high z-index so it appears above other content */
   background-color: #efefef; /* Set the background color of the header */
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.178); /* Add a subtle shadow effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* margin-bottom: 10px; */
 }
 
