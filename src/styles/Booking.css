@@ -5,14 +5,14 @@
   padding-bottom: 60px; 
 }
 
-form {
+.form1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
   border-radius: 8px;
 }
 
@@ -22,12 +22,12 @@ form {
 }
 
 label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   font-weight: bold;
 }
 
-input[type='date'],
-input[type='number'],
+.input [type='date'],
+.input [type='number'],
 select {
   width: 100%;
   padding: 0.5rem;
@@ -36,7 +36,7 @@ select {
   background-color: #f2f2f2;
 }
 
-button {
+.button2 {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -47,6 +47,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button2:hover {
   background-color: #388e3c;
 }

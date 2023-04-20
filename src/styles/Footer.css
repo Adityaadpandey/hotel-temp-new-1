@@ -44,7 +44,7 @@ footer {
   text-decoration: underline;
 }
 
-.form1 input[type="email"] {
+form input[type="email"] {
   width: 250px;
   padding: 10px;
   margin-bottom: 10px;
@@ -52,7 +52,7 @@ footer {
   border-radius: 3px;
 }
 
-.form1 button[type="submit"] {
+form button[type="submit"] {
   display: block;
   width:auto;
   padding: 10px;
@@ -65,7 +65,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-.form1 button[type="submit"]:hover {
+form button[type="submit"]:hover {
   background-color: #e67e22;
 }
 

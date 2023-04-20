@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Footer.css";
+import { googleLogout } from '@react-oauth/google';
 
 
 const Footer = () => {
@@ -51,7 +52,7 @@ const Footer = () => {
             </div>
             <div className="col">
               <h4>Subscribe</h4>
-              <form className="form1">
+              <form >
                 <input
                   type="email"
                   name="email"
@@ -64,6 +65,11 @@ const Footer = () => {
           {/* <hr> */}
           <p>&copy; 2023 My Hotel. All rights reserved.</p>
         </div>
+        <button onClick={() => {
+          localStorage.setItem("cred", false);
+          googleLogout();
+        }}>Logout</button>
+
       </footer>
     </>
   );

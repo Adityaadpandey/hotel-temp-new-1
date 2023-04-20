@@ -1,41 +1,22 @@
-import { useState } from 'react';
-import { GoogleLogin } from '@react-google-login';
+import React from "react";
 
-const CLIENT_ID = '378821471431-sicbspjgtk0bgtbfmdq831q0e90s7mou.apps.googleusercontent.com';
+import { GoogleLogin } from "@react-oauth/google";
 
-const Login = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState(null);
-
-  const onSuccess = (response) => {
-    console.log('Login Success: currentUser:', response.profileObj);
-    setUser(response.profileObj);
-    setIsLoggedIn(true);
-  };
-
-  const onFailure = (response) => {
-    console.log('Login Failed:', response);
-  };
-
+const google = () => {
   return (
-    <div>
-      {isLoggedIn ? (
-        <div>
-          <h2>Welcome {user.name}!</h2>
-          <p>You are now logged in with Google.</p>
-        </div>
-      ) : (
-        <GoogleLogin
-          clientId={CLIENT_ID}
-          buttonText="Login with Google"
-          onSuccess={onSuccess}
-          onFailure={onFailure}
-          cookiePolicy={'single_host_origin'}
-          responseType="code,token"
-        />
-      )}
-    </div>
+    <GoogleLogin
+      onSuccess={(credentialResponse) => {
+        console.log(credentialResponse);
+        localStorage.setItem("cred", true);
+        const cred = localStorage.getItem("cred");
+        console.log(cred + "  Login Success");
+
+      }}
+      onError={() => {
+        console.log("Login Failed");
+      }}
+    />
   );
 };
 
-export default Login;
+export default google;

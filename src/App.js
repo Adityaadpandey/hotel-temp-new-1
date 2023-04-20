@@ -14,6 +14,7 @@ function App() {
   return (
     // using router dom for changing the components
     <Router>
+      {/* localStorage.setItem('cred', false) */}
       {/* using the header  */}
       <Header />
       <Switch>
