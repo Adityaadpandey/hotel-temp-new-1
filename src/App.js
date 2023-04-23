@@ -9,6 +9,7 @@ import About from './pages/About';
 import './App.css';
 import Booking from './pages/Booking';
 import Login from './pages/Login';
+import Comp from './pages/Comp';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/booking" component={Booking} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/comp" component={Comp} />
       </Switch>
       {/* the footer */}
       <Footer />
