@@ -87,14 +87,25 @@ const Rooms = () => {
   const dlx = () => {
     localStorage.removeItem("room");
     localStorage.setItem("room", "Deluxe");
+    console.log(localStorage.getItem("room"));
+    window.location.href = "/booking";
+
   };
   const spr = () => {
     localStorage.removeItem("room");
     localStorage.setItem("room", "Superior");
+    console.log(localStorage.getItem("room"));
+    window.location.href = "/booking";
+
+
   };
-  const exs = () => {
+  const exs = (e) => {
+    e.preventDefault()
     localStorage.removeItem("room");
     localStorage.setItem("room", "Executive");
+    console.log(localStorage.getItem("room"));
+    window.location.href = "/booking";
+
   };
   return (
     <>

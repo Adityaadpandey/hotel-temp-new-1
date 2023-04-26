@@ -12,13 +12,15 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  /* background-color: #f7f7f7; */
+  background-color: #f7f7f7;
   border-radius: 8px;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  gap: 0.8rem;
 }
 
 label {
@@ -30,7 +32,7 @@ label {
 .input [type='number'],
 select {
   width: 100%;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   border-radius: 4px;
   border: none;
   background-color: #f2f2f2;

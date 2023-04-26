@@ -10,6 +10,7 @@ import './App.css';
 import Booking from './pages/Booking';
 import Login from './pages/Login';
 import Comp from './pages/Comp';
+import Final from './pages/Final';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/booking" component={Booking} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/comp" component={Comp} />
+        <Route exact path="/final" component={Final} />
       </Switch>
       {/* the footer */}
       <Footer />
