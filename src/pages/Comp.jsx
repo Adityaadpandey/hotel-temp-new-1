@@ -57,6 +57,7 @@ const Comp = () => {
                     <th>guests</th>
                     <th>roomType</th>
                     <th>phone</th>
+                    <th>Client</th>
                     <th>Send</th>
                   </tr>
                 </thead>
@@ -69,6 +70,7 @@ const Comp = () => {
                       <td>{item.guests}</td>
                       <td>{item.roomType}</td>
                       <td>{item.phone}</td>
+                      <td>{item.cred}</td>
                       <td>
                         <button
                           onClick={() => code(item.phone,item.roomType)}
