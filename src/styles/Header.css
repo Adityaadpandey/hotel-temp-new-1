@@ -10,6 +10,9 @@ header {
   /* margin-bottom: 10px; */
 }
 
+.head{
+  padding: 6px;
+}
   
   /* Style the logo */
   .logo img {

@@ -4,6 +4,10 @@ import '../styles/Header.css';
 
 function Header() {
   return (
+    <>
+    <div className="head">
+        
+   
     <header>
       <nav>
         <div className="logo">
@@ -16,7 +20,9 @@ function Header() {
         </ul>
         </div>
       </nav>
-    </header>
+        </header>
+        </div>
+    </>
   );
 }
 

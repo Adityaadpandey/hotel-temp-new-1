@@ -4,6 +4,10 @@ import { googleLogout } from '@react-oauth/google';
 
 
 const Footer = () => {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("Submitted");
+  }
 
   return (
     <>
@@ -52,7 +56,7 @@ const Footer = () => {
             </div>
             <div className="col">
               <h4>Subscribe</h4>
-              <form >
+              <form onSubmit={handleSubmit}>
                 <input
                   type="email"
                   name="email"

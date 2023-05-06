@@ -13,6 +13,7 @@ import Comp from './pages/Comp';
 import Final from './pages/Final';
 
 function App() {
+  console.log(localStorage.getItem('cred'));
   return (
     // using router dom for changing the components
     <Router>
