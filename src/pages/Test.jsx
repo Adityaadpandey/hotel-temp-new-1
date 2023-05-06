@@ -1,7 +1,9 @@
 import {GoogleOAuthProvider} from '@react-oauth/google';
 
 const Test = () => {
-    const { isSignedIn, user } = GoogleOAuthProvider();
+    const { isSignedIn, user } = GoogleOAuthProvider({
+        clientId: "378821471431-sicbspjgtk0bgtbfmdq831q0e90s7mou.apps.googleusercontent.com"
+    });
     return (
       <>
         <div>
