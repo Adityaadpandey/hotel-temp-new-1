@@ -1,12 +1,20 @@
-import React from 'react'
+import {GoogleOAuthProvider} from '@react-oauth/google';
 
 const Test = () => {
-    const user = JSON.parse(localStorage.getItem('credentialResponse'))
-  return (
+    const { isSignedIn, user } = GoogleOAuthProvider();
+    return (
       <>
-      <h2>Welcome {user.profileObj.name}!</h2>
-          <p>Email: {user.profileObj.email}</p>
-          <img src={user.profileObj.imageUrl} alt={user.profileObj.name} />
+        <div>
+       {isSignedIn ? (
+        <div>
+          <h1>Hello, {user.name}</h1>
+          {/* <button onClick={signOut}>Sign out</button> */}
+        </div>
+      ) : (
+        // <button onClick={signIn}>Sign in</button>
+        <h1>Not Signed In</h1>
+      )}
+    </div>
       </>
   )
 }
