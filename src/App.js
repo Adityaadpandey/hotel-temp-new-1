@@ -11,6 +11,7 @@ import Booking from './pages/Booking';
 import Login from './pages/Login';
 import Comp from './pages/Comp';
 import Final from './pages/Final';
+import Test from './pages/Test';
 
 function App() {
   console.log(localStorage.getItem('cred'));
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/comp" component={Comp} />
         <Route exact path="/final" component={Final} />
+        <Route exact path="/test" component={Test} />
       </Switch>
       {/* the footer */}
       <Footer />

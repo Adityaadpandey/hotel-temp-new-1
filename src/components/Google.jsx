@@ -7,7 +7,7 @@ const google = () => {
     <GoogleLogin
       onSuccess={(credentialResponse) => {
         console.log(credentialResponse);
-        localStorage.setItem("cred", credentialResponse.clientId);
+        localStorage.setItem("cred", credentialResponse);
         const cred = localStorage.getItem("cred");
         console.log(cred + "  Login Success");
 
