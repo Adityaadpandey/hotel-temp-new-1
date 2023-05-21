@@ -2,66 +2,105 @@ header {
   /* position: fixed; Set the header to a fixed position */
   top: 0;
   left: 0;
-  width: 100%; /* Make the header span the full width of the viewport */
+  width: 100%;
+  /* Make the header span the full width of the viewport */
   padding: 10px;
-  z-index: 1; /* Set the header to a high z-index so it appears above other content */
-  background-color: #efefef; /* Set the background color of the header */
+  z-index: 1;
+  /* Set the header to a high z-index so it appears above other content */
+  background-color: #efefef;
+  /* Set the background color of the header */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* margin-bottom: 10px; */
 }
+span{
+  font-size: 8px;
+  display:flex;
+  margin-right:-5px;
+  margin-top: -2px;
+  margin-bottom: -3px;
+}
 
-.head{
+.data{
+  border-radius: 20px;
+  /* margin-top: -2px; */
+}
+.head {
   padding: 6px;
 }
-  
-  /* Style the logo */
-  .logo img {
-    height: 30px;
-  }
-  
-  /* Style the navigation links */
-  .nav-links {
-    display: flex; /* Use flexbox to display the links horizontally */
-    list-style: none;
-    float: right;
-    margin: 0;
-    padding: 0;
-  }
-  nav{
-    overflow: hidden;
-    /* margin-bottom: 10px; */
-  }
-  
-  .nav-links li {
-    margin-right: 20px; /* Add some margin between each link */
-  }
-  
-  .nav-links a {
-    color: #333; /* Set the default color of the links */
-    text-decoration: none; /* Remove underlines from the links */
-    font-size: 16px; /* Set the font size of the links */
-    font-weight: bold; /* Make the links bold */
-    transition: all 0.3s ease; /* Add a smooth transition effect */
-  }
-  
-  .nav-links a:hover {
-    color: #f39c12; /* Change the color of the links when the user hovers over them */
-  }
-  
-  /* Style the button */
-  .button {
-    background-color: #f39c12; /* Set the background color of the button */
-    color: #fff; /* Set the color of the button text */
-    border: none; /* Remove the button border */
-    border-radius: 3px; /* Add a slight border radius */
-    padding: 10px 20px; /* Add some padding to the button */
-    font-size: 16px; /* Set the font size of the button text */
-    font-weight: bold; /* Make the button text bold */
-    cursor: pointer; /* Change the cursor to a pointer when the user hovers over the button */
-    transition: all 0.3s ease; /* Add a smooth transition effect */
-  }
-  
-  .button:hover {
-    background-color: #e67e22; /* Change the background color of the button when the user hovers over it */
-  }
-  
+
+/* Style the logo */
+.logo img {
+  height: 30px;
+}
+
+/* Style the navigation links */
+.nav-links {
+  display: flex;
+  /* Use flexbox to display the links horizontally */
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  overflow: hidden;
+  /* margin-bottom: 10px; */
+}
+
+.nav-links li {
+  /* margin-top: 1px; */
+  margin-right: 20px;
+  /* Add some margin between each link */
+}
+li a{
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.nav-links a {
+  color: #333;
+  /* Set the default color of the links */
+  text-decoration: none;
+  /* Remove underlines from the links */
+  font-size: 16px;
+  /* Set the font size of the links */
+  font-weight: bold;
+  /* Make the links bold */
+  transition: all 0.3s ease;
+  /* Add a smooth transition effect */
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+  /* Change the color of the links when the user hovers over them */
+}
+.btn{
+  border-style: none;
+}
+/* Style the button */
+.button {
+  background-color: #f39c12;
+  /* Set the background color of the button */
+  color: #fff;
+  /* Set the color of the button text */
+  border: none;
+  /* Remove the button border */
+  border-radius: 3px;
+  /* Add a slight border radius */
+  padding: 10px 20px;
+  /* Add some padding to the button */
+  font-size: 16px;
+  /* Set the font size of the button text */
+  font-weight: bold;
+  /* Make the button text bold */
+  cursor: pointer;
+  /* Change the cursor to a pointer when the user hovers over the button */
+  transition: all 0.3s ease;
+  /* Add a smooth transition effect */
+}
+
+.button:hover {
+  background-color: #e67e22;
+  /* Change the background color of the button when the user hovers over it */
+}

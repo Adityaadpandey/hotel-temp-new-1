@@ -1,7 +1,8 @@
 footer {
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(221, 221, 221);
   color: #2c3e50;
   padding: 50px 0;
+  /* padding-bottom: -20px; */
 }
 
 .container {
@@ -16,7 +17,7 @@ footer {
 }
 
 .col {
-  width: 25%;
+  /* width: 25%; */
   margin-bottom: 30px;
 }
 
@@ -93,10 +94,31 @@ form button[type="submit"]:hover {
   }
 
   form input[type="email"] {
+    width: calc(100% - 20px);
+
+
+  }
+
+  form button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:430px) {
+  *{
+    font-size: 14px;
+    /* background-color: #e67e22; */
+  }
+  .col {
+    min-width: 30%;
+  }
+
+  form input[type="email"] {
     width: 100%;
   }
 
   form button[type="submit"] {
     width: 100%;
   }
+  
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Footer.css";
-import { googleLogout } from '@react-oauth/google';
+// import { googleLogout } from '@react-oauth/google';
 
 
 const Footer = () => {
@@ -8,6 +8,10 @@ const Footer = () => {
     e.preventDefault();
     console.log("Submitted");
   }
+  // let data = localStorage.getItem("user")
+  // const d = JSON.parse(data)
+  // console.log(typeof d);
+// 
 
   return (
     <>
@@ -69,10 +73,11 @@ const Footer = () => {
           {/* <hr> */}
           <p>&copy; 2023 My Hotel. All rights reserved.</p>
         </div>
-        <button onClick={() => {
+        {/* <button onClick={() => {
           localStorage.setItem("cred", false);
           googleLogout();
-        }}>Logout</button>
+        }}>Logout</button> */}
+        {/* <img src={data} alt="image" /> */}
 
       </footer>
     </>

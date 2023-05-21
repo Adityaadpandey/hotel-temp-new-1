@@ -3,7 +3,7 @@ import "../styles/Contact.css";
 
 const initialFormData = {
   name: "",
-  email: "",
+  // email: "",
   phone: "",
   message: "",
 };
@@ -37,12 +37,6 @@ const Contact = () => {
       errors.name = "Name is required";
     }
 
-    if (!data.email.trim()) {
-      errors.email = "Email is required";
-    } else if (!isValidEmail(data.email)) {
-      errors.email = "Invalid email address";
-    }
-
     if (!data.phone.trim()) {
       errors.phone = "Phone number is required";
     } else if (!isValidPhone(data.phone)) {
@@ -54,11 +48,6 @@ const Contact = () => {
     }
 
     return errors;
-  };
-
-  const isValidEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
   };
 
   const isValidPhone = (phone) => {
@@ -78,18 +67,6 @@ const Contact = () => {
           onChange={handleChange}
         />
         {errors.name && <div className="error">{errors.name}</div>}
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        {errors.email && <div className="error">{errors.email}</div>}
       </div>
 
       <div className="form-group">

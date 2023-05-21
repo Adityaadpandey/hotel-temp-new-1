@@ -5,7 +5,7 @@ import "../styles/Login.css"
 
 
 const Login = () => {
-    if (localStorage.getItem('cred') === 'true') {
+    if (localStorage.getItem('Log') === 'true') {
         window.location.href = '/booking';
     }
 

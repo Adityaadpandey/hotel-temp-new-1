@@ -1,0 +1,16 @@
+{
+    "iss": "https://accounts.google.com",
+    "nbf": 1684657495,
+    "aud": "378821471431-sicbspjgtk0bgtbfmdq831q0e90s7mou.apps.googleusercontent.com",
+    "sub": "105318701555568205817",
+    "email": "adp.my.startup@gmail.com",
+    "email_verified": true,
+    "azp": "378821471431-sicbspjgtk0bgtbfmdq831q0e90s7mou.apps.googleusercontent.com",
+    "name": "ADITYA PANDEY",
+    "picture": "https://lh3.googleusercontent.com/a/AGNmyxagcSc7D6niyMoM4h1aI7nhfMJ2BkjIJ5918xXU=s96-c",
+    "given_name": "ADITYA",
+    "family_name": "PANDEY",
+    "iat": 1684657795,
+    "exp": 1684661395,
+    "jti": "b91f7939380d1d524bcb74652569e91e917c2310"
+}

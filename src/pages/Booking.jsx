@@ -25,6 +25,9 @@ const Booking = () => {
       setRoomType("Executive");
     }
   }, []);
+  useEffect(() => {
+    
+  })
 
   const handleSubmit = (e) => {
     const cred = localStorage.getItem("cred");
@@ -125,6 +128,11 @@ const Booking = () => {
                 onChange={(e) => setPhone(e.target.value)}
                 required
               />
+            </div>
+            <div className="input-group">
+              <label htmlFor="total">
+                {console.log(typeof(checkIn))}
+              </label>
             </div>
             <button className="button2" type="submit">
               Book Now
