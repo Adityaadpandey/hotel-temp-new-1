@@ -7,10 +7,10 @@ import '../styles/Header.css';
 function Header() {
 
   let data = localStorage.getItem("image")
-  let name = JSON.parse(localStorage.getItem("user"))
+  // let name = JSON.parse(localStorage.getItem("user"))
   let dta = localStorage.getItem("Log")
 
-  console.log(name.given_name);
+  // console.log(name.given_name);
 
 
   return (
@@ -34,7 +34,7 @@ function Header() {
                       {/* googleLogout(); */}
                     {/* }}> */}
 
-                      <img className='data' src={data} alt={name.given_name} />
+                      <img className='data' src={data} alt="" />
                     {/* </button> */}
 
                     {/* <span>{name.given_name}</span> */}
